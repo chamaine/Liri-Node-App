@@ -1,0 +1,25 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "Liri App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo - Friday",
+    "start": "node liri.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chamaine/Liri-Node-App.git"
+  },
+  "author": "Chamaine Woffard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chamaine/Liri-Node-App/issues"
+  },
+  "homepage": "https://github.com/chamaine/Liri-Node-App#readme",
+  "keywords": [],
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "twitter": "^1.7.1"
+  }
+}
