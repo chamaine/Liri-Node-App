@@ -1,25 +1,25 @@
-var twitterPackage =("twitter");
 
-var twitterKeys = {
-  consumer_key: '2gb9sk1YADZReETCTIxyMhnfF',
-  consumer_secret: 'Eszbo8ZAC4QV1iJonecwPEJjSGjjcLNvrKSdMRv3UlEBgOZmsb',
-  access_token_key: 'https://api.twitter.com/oauth/access_token',
-  access_token_secret: 'ITOwG6ldPwmZHJMXTxHwrGWPAVRPpykUzixXzuAGvX7CX',
-}
-
-module.exports = twitterKeys;
+var keys = require("...");
+var Twitter = require("twitter");
 
 
-
-Twitter.stream('statuses/filter', {track: '#oakland'}, function(stream) {
-  stream.on('data', function(tweet) {
-    console.log(tweet.text);
-  });
-
-  stream.on('error', function(error) {
-    console.log(error);
-  });
+var client = new Twitter({
+  consumer_key: '',
+  consumer_secret: '',
+  access_token_key: '',
+  access_token_secret: ''
 });
+
+
+
+var params = {screen_name: 'chamainew'};
+client.get('statuses/user_timeline', params, function(error, tweets, response) {
+  if (!error) {
+    console.log(tweets);
+  }
+});
+
+
 
 
 
